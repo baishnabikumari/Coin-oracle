@@ -7,20 +7,48 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <img src="assets/logo.png" alt="Coin Oracle logo" class="logo">
+
+    <div class="theme-toggle">
+        <div class="toggle-wrapper">
+            <input class="toggle-checkbox" id="theme-switch" type="checkbox">
+            <div class="toggle-container">
+                <div class="toggle-button">
+                    <div class="toggle-button-circles-container">
+                        <div class="toggle-button-circle"></div>
+                        <div class="toggle-button-circles"></div>
+                        <div class="toggle-button-circles"></div>
+                        <div class="toggle-button-circle"></div>
+                        <div class="toggle-button-circle"></div>
+                        <div class="toggle-button-circle"></div>
+                        <div class="toggle-button-circle"></div>
+                        <div class="toggle-button-circle"></div>
+                        <div class="toggle-button-circle"></div>
+                        <div class="toggle-button-circle"></div>
+                        <div class="toggle-button-circle"></div>
+                        <div class="toggle-button-circle"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="container">
-        <h1> Coin Oracle</h1>
+        <h1>Coin Oracle</h1>
+
         <div class="balance">
             Coins: <span id="coin-balance">5</span>
         </div>
+
         <div class="buttons">
             <button id="spend-coin">Spend 1 Coin</button>
             <button id="get-coin">Get 1 Free Coin</button>
         </div>
-        <div class="message-box" id="message-box">
+
+        <div class="message-box" id="message-box" aria-live="polite">
             Click "Spend 1 Coin" to reveal your Fortune...
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>
