@@ -124,13 +124,13 @@ button:active {
     border-radius: 375em;
     width: 3em;
     height: 1.5em;
-    background-color: #e8e8e8;
+    background-color: #fe48f5;
     box-shadow: inset 0 0 .0625em .125em rgb(255, 255, 255 / .2), inset 0 .0625em .125em rgb(0, 0, 0 / .4);
     transition: background-color .4s linear;
 }
 
 .toggle-checkbox:checked + .toggle-container {
-    background-color: #f3b519;
+    background-color: #202020;
 }
 
 .toggle-button {
@@ -139,7 +139,7 @@ button:active {
     align-items: center;
     position: absolute;
     left: .0625em;
-    border-radius: .3125em;
+    border-radius: 1.3125em;
     width: 1.375em;
     height: 1.375em;
     background-color: #e8e8e8;
@@ -223,5 +223,37 @@ body.dark-mode .sidebar a {
 
 body.dark-mode .sidebar a:hover {
     background: #e68900;
+}
+
+.toss-coin {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.1px;
+}
+
+.coin-img {
+    width: 200px;
+    height: auto;
+    cursor: pointer;
+}
+
+.toss-btn {
+    background: #b45ac9;
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.toss-btn:hover {
+    background: #923ca8;
 }
 
