@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earn Coins - Incident Page</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url(assets/background.png) no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;   /* Center vertically */
+            min-height: 100vh;
+            padding: 40px;
+        }
+
+        .incident-container {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 16px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            width: 90%;
+            max-width: 700px;
+            text-align: center;
+        }
+
+        .incident-container h1 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .incident-container p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .balance {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #444;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+        }
+
+        textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background: #f8b500;
+            border: none;
+            color: white;
+            font-size: 1.1rem;
+            font-weight: bold;
+            padding: 12px 24px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.1s ease;
+        }
+
+        .submit-btn:hover {
+            background: #d99800;
+        }
+
+        .submit-btn:active {
+            transform: scale(0.96);
+        }
+
+        .reward-message {
+            margin-top: 20px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #333;
+            display: none;
+        }
+
+        .coin-animation {
+            font-size: 3rem;
+            margin-top: 15px;
+            display: none;
+            animation: bounce 1s ease infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-top: 25px;
+            background: #b95ac9;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background: #9334aa;
+        }
+    </style>
+</head>
+<body>
+    <div class="incident-container">
+        <h1>Share Your Incident and Earn COINS</h1>
+        <p>Tell us about your day and get rewarded with COINS!!!</p>
+
+        <!-- Live Balance -->
+        <p class="balance">Your Balance: <span id="coin-balance">0</span> 🪙</p>
+
+        <form id="incident-form">
+            <div class="form-group">
+                <label for="incident-date">Date</label>
+                <input type="date" id="incident-date" required>
+            </div>
+            <div class="form-group">
+                <label for="incident-time">Time</label>
+                <input type="time" id="incident-time" required>
+            </div>
+            <div class="form-group">
+                <label for="incident-text">Describe your Incident</label>
+                <textarea id="incident-text" placeholder="Write Your STORY Here..." required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Submit & Get COINS</button>
+        </form>
+
+        <div class="reward-message" id="reward-message"></div>
+        <div class="coin-animation" id="coin-animation">🪙🪙</div>
+
+        <a href="index.html" class="back-btn">⬅ Back To HOME</a>
+    </div>
+
+    <script>
+        const form = document.getElementById('incident-form');
+        const rewardMessage = document.getElementById('reward-message');
+        const coinAnimation = document.getElementById('coin-animation');
+        const balanceEl = document.getElementById("coin-balance");
+
+        // Update balance display
+        function updateBalanceDisplay() {
+            let balance = parseInt(localStorage.getItem("coins")) || 0;
+            balanceEl.textContent = balance;
+        }
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const reward = Math.floor(Math.random() * (99 - 9 + 1)) + 9;
+
+            // Update balance
+            let currentBalance = parseInt(localStorage.getItem("coins")) || 0;
+            currentBalance += reward;
+            localStorage.setItem("coins", currentBalance);
+
+            // Show messages + animation
+            rewardMessage.textContent = `🎉 Congratulations! You earned ${reward} coins! (Total: ${currentBalance})`;
+            rewardMessage.style.display = 'block';
+            coinAnimation.style.display = 'block';
+
+            updateBalanceDisplay();
+        });
+
+        // Initialize balance on load
+        updateBalanceDisplay();
+    </script>
+</body>
+</html>
+

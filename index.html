@@ -8,6 +8,7 @@
 </head>
 <body>
 
+    <!-- Sidebar -->
     <div class="sidebar">
         <a href="#">HOME</a>
         <a href="#">COINS</a>
@@ -18,8 +19,10 @@
         <a href="#">ORACLE</a>
     </div>
 
+    <!-- Logo -->
     <img src="assets/logo.png" alt="Coin Oracle logo" class="logo">
 
+    <!-- Theme toggle -->
     <div class="theme-toggle">
         <div class="toggle-wrapper">
             <input class="toggle-checkbox" id="theme-switch" type="checkbox">
@@ -43,6 +46,8 @@
             </div>
         </div>
     </div>
+
+    <!-- Main container -->
     <div class="container">
         <h1>Coin Oracle</h1>
 
@@ -52,7 +57,7 @@
 
         <div class="buttons">
             <button id="spend-coin">Spend 1 Coin</button>
-            <button id="get-coin">Get 1 Free Coin</button>
+            <a href="incident.html" class="earn-coins-btn">Want More COINS 🪙?</a>
         </div>
 
         <div class="message-box" id="message-box" aria-live="polite">
@@ -60,10 +65,20 @@
         </div>
     </div>
 
-    <script src="script.js" defer></script>
+    <!-- Coin Toss Section -->
     <div class="toss-coin">
-        <img src="assets/toss.png" alt="Toss Coin" class="coin-img">
-        <button class="toss-btn">Toss The Coin</button>
+        <div class="coin" id="coin">
+            <div class="front">
+                <img src="assets/coin-front.png" alt="Coin Front">
+            </div>
+            <div class="back">
+                <img src="assets/coin-back.png" alt="Coin Back">
+            </div>
+        </div>
+        <button class="toss-btn" id="toss-btn">Toss The Coin (10 Coins)</button>
+        <p id="toss-result"></p>
     </div>
+
+    <script src="script.js" defer></script>
 </body>
 </html>
