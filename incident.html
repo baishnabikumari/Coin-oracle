@@ -17,6 +17,7 @@
             padding: 40px;
         }
 
+        /*This will create a white round box with in center */
         .incident-container {
             background: #fff;
             padding: 2rem;
@@ -55,6 +56,7 @@
             margin-bottom: 8px;
         }
 
+        /*adding date and time in the incident box with modern look */
         input, textarea {
             width: 100%;
             padding: 10px;
@@ -68,6 +70,7 @@
             resize: vertical;
         }
 
+        /* making SUBMIT button large and fit so it will match the website theme */
         .submit-btn {
             background: #f8b500;
             border: none;
@@ -103,11 +106,13 @@
             animation: bounce 1s ease infinite;
         }
 
+        /* a coin emoji with bouncing effects*/
         @keyframes bounce {
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(-10px); }
         }
 
+        /* a back button that will help user to get back to the home page instantly !! */
         .back-btn {
             display: inline-block;
             margin-top: 25px;
@@ -156,36 +161,39 @@
     </div>
 
     <script>
-        const form = document.getElementById('incident-form');
+        const form = document.getElementById('incident-form'); //stores the HTML elements so JS can modify them later
         const rewardMessage = document.getElementById('reward-message');
         const coinAnimation = document.getElementById('coin-animation');
         const balanceEl = document.getElementById("coin-balance");
 
-        // Update balance display
+        // Fatches the current number of coins we have in the localstorage and also display it.
         function updateBalanceDisplay() {
             let balance = parseInt(localStorage.getItem("coins")) || 0;
             balanceEl.textContent = balance;
         }
 
+        // it will not refresh the page when user submit the incident
         form.addEventListener('submit', function(e) {
             e.preventDefault();
 
+            // it wll generate the random coins between 9 and 99 when user submit the incident.
             const reward = Math.floor(Math.random() * (99 - 9 + 1)) + 9;
 
-            // Update balance
+            // Old coins + the coins after submission of the incident and add to the localstorage and will save it again
             let currentBalance = parseInt(localStorage.getItem("coins")) || 0;
             currentBalance += reward;
             localStorage.setItem("coins", currentBalance);
 
-            // Show messages + animation
+            // when i will trigger the coin emoji it will show animationa and a message that the coin is rewarded and more.
             rewardMessage.textContent = `🎉 Congratulations! You earned ${reward} coins! (Total: ${currentBalance})`;
             rewardMessage.style.display = 'block';
             coinAnimation.style.display = 'block';
 
+            // total new coins added to the balance.
             updateBalanceDisplay();
         });
 
-        // Initialize balance on load
+        // balance of the coin instantly shows to the use when they are on the home page.
         updateBalanceDisplay();
     </script>
 </body>
