@@ -10,13 +10,13 @@ I have studied to use JavaScript to handle events, local storage to store progre
 
 ##  Features
 
-  * Start with 5 coins (stored in localStorage).
-  * Spend coins to unlock fortunes.
-  * Toss the coin for 10 coins → win or lose coins based on result.
+  * Always Start with 5 coins (stored in localStorage☺️).
+  * Spend coins to unlock fortunes(Which will display in the white box).
+  * Toss the coin for 10 coins → win or lose coins based on result (I will add a 3D coin for better UI but till now the button is working well!.
   * Earn free coins by writing incidents.
-*  **Randomized Fortunes** with 500+ messages.
-*  **Coin Toss Game** with smooth flip animations.
-*  **Multiple Pages**:
+*  **Randomized Fortunes** with 20+ messages.
+*  **Coin Toss Game** with smooth flip animations(3D coin will be added soon).
+*  **Multiple Pages**: Home and Incident page is now open but rest are need to be made after.
 ---
 
 ## 📸 Screenshots
@@ -30,12 +30,12 @@ I have studied to use JavaScript to handle events, local storage to store progre
 ## 🎯 How to Use
 
 1. Clone/download the repo.
-2. Open `index.html` in your browser.
-3. Spend coins to reveal fortunes, or toss the coin for rewards.
-4. Toggle dark/light theme anytime (persists across sessions).
-5. Visit `incident.html` to earn more coins by writing a short story.
+2. Open `index.html` by clicking right key on mouse and then tap "Open with the live server" in your browser (plz make sure you have Live Server installed if you are opening it in VS-Code).
+3. Spend coins by clicking "Spend 1 Coin" to reveal fortunes, or toss the coin for rewards.
+4. Toggle dark/light theme anytime - you can see the purple color when you are in light mode a black color inside toogle button when u are in dark mode🤗.
+5. Visit `incident.html` to earn more coins by writing a short story - without selecting the date and time you can't write the story/incident so make sure u select the date and the time.
 
 ---
 
-## Thanks --
+## Thanks Happy Coding Gyus --
 
