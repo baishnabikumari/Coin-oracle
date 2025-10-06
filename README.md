@@ -1,43 +1,22 @@
 # 🪙 Coin Oracle
 
-Coin Oracle is an interactive **fortune-telling web app** where users can spend coins to reveal fortunes or toss a coin for bigger rewards. It combines fun animations, gamified rewards, and a sleek UI to create a playful experience.
+Coin Oracle is an interactive web application and a fun game that I created, where a user gets to spend coins either to get a random fortune, or roll dice and get a bigger prize.
+
+The concept was inspired by the desire to combine a game of chance simulator with a mini economy. I created the interface, included the light/dark themes, and ensured that the animations were smooth and satisfactory. A toss is 10 coins, and a realistic animated coin-flip is involved, and on a win, you are given more coins back.
+
+I have studied to use JavaScript to handle events, local storage to store progress and CSS transitions to animate the coin and other elements of the user interface. Timing the coin animation was one of the most difficult aspects and balancing the reward system to make it feel just is also a difficult task.
 
 ---
 
-## ✨ Features
-
-* 🎨 **Modern UI/UX** with responsive design.
-* 🌙 **Dark/Light Theme Toggle** (saves preference in localStorage).
-* 💰 **Coin System**:
+##  Features
 
   * Start with 5 coins (stored in localStorage).
   * Spend coins to unlock fortunes.
   * Toss the coin for 10 coins → win or lose coins based on result.
-  * Earn free coins by writing incidents (`incident.html`).
-* 🎲 **Randomized Fortunes** with 500+ messages.
-* 🪙 **Coin Toss Game** with smooth flip animations.
-* 🔗 **Multiple Pages**:
-
-  * `index.html` → Main Coin Oracle game.
-  * `incident.html` → Earn free coins by storytelling.
-
----
-
-## 🛠️ Tech Stack
-
-* **Frontend**: HTML5, CSS3 (animations, transitions, responsive design)
-* **Logic**: Vanilla JavaScript (DOM, localStorage, random outcomes)
-* **Assets**: Custom logo, backgrounds, coin images & 3D coin model (`coin.glb` via Three.js support).
-
----
-
-## 🚀 Future Improvements
-
-* 🎮 Add more coin-based mini-games (spin wheel, lottery, trading).
-* 👤 User profiles with skins/customization.
-* 🌍 Leaderboards or multiplayer mode.
-* 💾 Backend integration to save progress permanently.
-
+  * Earn free coins by writing incidents.
+*  **Randomized Fortunes** with 500+ messages.
+*  **Coin Toss Game** with smooth flip animations.
+*  **Multiple Pages**:
 ---
 
 ## 📸 Screenshots
