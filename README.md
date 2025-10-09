@@ -34,7 +34,7 @@ I have studied to use JavaScript to handle events, local storage to store progre
 3. Spend coins by clicking "Spend 1 Coin" to reveal fortunes, or toss the coin for rewards.
 4. Toggle dark/light theme anytime - you can see the purple color when you are in light mode a black color inside toogle button when u are in dark mode🤗.
 5. Visit `incident.html` to earn more coins by writing a short story - without selecting the date and time you can't write the story/incident so make sure u select the date and the time.
-
+NOTE-- All the images which is used in this website are in the assets forder in the form of image and 1 is in GLB format which is a 3D coin(This is for Toss the coin- Head or Tail).
 ---
 
 ## Thanks Happy Coding Gyus --
