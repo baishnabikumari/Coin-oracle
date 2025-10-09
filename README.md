@@ -19,11 +19,13 @@ I have studied to use JavaScript to handle events, local storage to store progre
 *  **Multiple Pages**: Home and Incident page is now open but rest are need to be made after.
 ---
 
-## 📸 Screenshots
+## 📸 Screenshots and demo(video format).
 
 <img width="1437" height="763" alt="Screenshot 2025-10-06 at 3 49 50 AM" src="https://github.com/user-attachments/assets/1516c861-c89e-40be-8b17-8f7a06fc0e61" />
 
 <img width="1440" height="765" alt="Screenshot 2025-10-06 at 3 50 43 AM" src="https://github.com/user-attachments/assets/cb09c865-868a-49f2-a3d2-778be9c8ebc9" />
+
+https://github.com/user-attachments/assets/e92106b1-b5f5-4533-a195-60c04b6dcd19
 
 ---
 
